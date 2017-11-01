@@ -10,38 +10,14 @@ function calculator(){
     })
   }
 
-  //This adds + to the array and to the top
-  var plusButton = document.getElementById('plus')
-  plusButton.addEventListener('click', function(event){
-    event.stopPropagation()
-    chosenNumbersAndOperators.push('+')
-    document.getElementById('screen').innerHTML = '+'
-  })
-
-  //this add - to the array and to the top
-  var minusButton = document.getElementById('minus')
-  minusButton.addEventListener('click', function(event){
-    event.stopPropagation()
-    chosenNumbersAndOperators.push('-')
-    document.getElementById('screen').innerHTML = '-'
-  })
-
-  //This adds / to the array and to the top
-  var divideButton = document.getElementById('divide')
-  divideButton.addEventListener('click', function(event){
-    event.stopPropagation()
-    chosenNumbersAndOperators.push('/')
-    document.getElementById('screen').innerHTML = '/'
-  })
-
-  //This adds * to the array and to the top
-  var multiplyButton = document.getElementById('multiply')
-  multiplyButton.addEventListener('click', function(event){
-    event.stopPropagation()
-    chosenNumbersAndOperators.push('*')
-    document.getElementById('screen').innerHTML = "*"
-  })
-  //Equals sign which will clear top section, join array
+  var operatorButton = document.querySelectorAll('.operator')
+  for (var i = 0; i < operatorButton.length; i++) {
+    var operator = operatorButton[i]
+    operator.addEventListener('click',function(event){
+      chosenNumbersAndOperators.push(this.innerHTML)
+      document.getElementById('screen').innerHTML = chosenNumbersAndOperators.join('')
+    })
+  }
 
   var equalsButton = document.getElementById('equals')
   equalsButton.addEventListener('click', function(event){
@@ -61,8 +37,10 @@ function calculator(){
     document.getElementById('screen').innerHTML = ""
     chosenNumbersAndOperators = []
   }
-  
   var chosenNumbersAndOperators = []
 }
+
+
+
 
 calculator()
