@@ -6,7 +6,8 @@ for (var i = 0; i < numberButton.length; i++) {
   button.addEventListener('click', function(event){
     document.getElementById('screen').innerHTML = this.innerHTML
     chosenNumbersAndOperators.push(this.innerHTML)
-    
+    console.log(chosenNumbersAndOperators)
+
   })
 }
 
@@ -16,26 +17,27 @@ for (var i = 0; i < numberButton.length; i++) {
 
 var plusButton = document.getElementById('plus')
 plusButton.addEventListener('click', function(event){
+  event.stopPropagation()
   chosenNumbersAndOperators.push('+')
+  console.log(chosenNumbersAndOperators)
 
 })
-
 var minusButton = document.getElementById('minus')
-plusButton.addEventListener('click', function(event){
+minusButton.addEventListener('click', function(event){
+  event.stopPropagation()
   chosenNumbersAndOperators.push('-')
 
 })
-
 var divideButton = document.getElementById('divide')
-plusButton.addEventListener('click', function(event){
+divideButton.addEventListener('click', function(event){
+  event.stopPropagation()
   chosenNumbersAndOperators.push('/')
 
 })
-
 var multiplyButton = document.getElementById('multiply')
-plusButton.addEventListener('click', function(event){
+multiplyButton.addEventListener('click', function(event){
+  event.stopPropagation()
   chosenNumbersAndOperators.push('*')
-
 })
 
 var chosenNumbersAndOperators = []
