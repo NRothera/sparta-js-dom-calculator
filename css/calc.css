@@ -57,7 +57,8 @@ h2 {
 	font-family: Courier;
 
 }
-.buttonClear {
+
+#clear {
 	width: 60px;
 	height: 60px;
 	font-size: 30px;
@@ -79,4 +80,10 @@ button {
 
 .display {
 	margin-right: 10px
+}
+
+#zero{
+	position: absolute;
+	left:380px;
+	width:300px;
 }
