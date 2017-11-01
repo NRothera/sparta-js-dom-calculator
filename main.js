@@ -10,6 +10,7 @@ function calculator(){
     })
   }
 
+  //This section cycles through the opertions and adds to array and top
   var operatorButton = document.querySelectorAll('.operator')
   for (var i = 0; i < operatorButton.length; i++) {
     var operator = operatorButton[i]
@@ -19,6 +20,7 @@ function calculator(){
     })
   }
 
+  //This adds the answer to the top and then resets the array to empty
   var equalsButton = document.getElementById('equals')
   equalsButton.addEventListener('click', function(event){
     var numbersJoined = eval(chosenNumbersAndOperators.join(""));
@@ -26,6 +28,7 @@ function calculator(){
     chosenNumbersAndOperators = [];
   })
 
+  //This clears the top and array using the av function
   var clearButton = document.getElementById('clear')
   clearButton.addEventListener('click', av)
 
@@ -33,6 +36,8 @@ function calculator(){
   function joinArray(chosenNumbersAndOperators){
     return chosenNumbersAndOperators.join('')
   }
+  
+  //This is used to clear the top and array
   function av(){
     document.getElementById('screen').innerHTML = ""
     chosenNumbersAndOperators = []
