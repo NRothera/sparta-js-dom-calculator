@@ -1,8 +1,13 @@
 //When number is clicked, put into top section
-var button = document.getElementsByClassName('buttonNum')
-button.addEventListener('click',function(event){
-  document.getElementById('screen').innerHTML = button.innerHTML
-})
+var numberButton = document.querySelectorAll('.buttonNum')
+
+for (var i = 0; i < numberButton.length; i++) {
+  var button = numberButton[i]
+  button.addEventListener('click', function(even){
+    document.getElementById('screen').innerHTML = this.innerHTML
+  })
+}
+
 //When number is clicked, store number in array
 
 //Equals sign which will clear top section, join array
