@@ -1,3 +1,5 @@
+
+
 function calculator(){
   //When number is clicked, put into top section
   var numberButton = document.querySelectorAll('.buttonNum')
@@ -6,7 +8,6 @@ function calculator(){
     button.addEventListener('click', function(event){
       chosenNumbersAndOperators.push(this.innerHTML)
       document.getElementById('screen').innerHTML = chosenNumbersAndOperators.join('')
-      console.log(chosenNumbersAndOperators)
     })
   }
 
@@ -32,11 +33,6 @@ function calculator(){
   var clearButton = document.getElementById('clear')
   clearButton.addEventListener('click', av)
 
-  //This function clears the array and the top section
-  function joinArray(chosenNumbersAndOperators){
-    return chosenNumbersAndOperators.join('')
-  }
-  
   //This is used to clear the top and array
   function av(){
     document.getElementById('screen').innerHTML = ""
@@ -44,8 +40,4 @@ function calculator(){
   }
   var chosenNumbersAndOperators = []
 }
-
-
-
-
 calculator()

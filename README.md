@@ -8,4 +8,4 @@ I spent a lot of time trying to figure out how to turn my array with all the val
 
 ## Good things
 
-After a bit of time things started to make more sense and got a lot smoother and easier. Now that I'e finished the whole task seems a lot more simple.
+After a bit of time things started to make more sense and got a lot smoother and easier. Now that I've finished the whole task seems a lot more simple.
